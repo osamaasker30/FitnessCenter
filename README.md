@@ -1,4 +1,4 @@
-# 🏋️ Fitness Center Management and Appointment System (PhishGuard)
+# 🏋️ Fitness Center Management and Appointment System 
 
 ## 📌 Project Overview
 
