@@ -62,7 +62,6 @@ To access the administrative CRUD panel, you must manually create a user and ass
 
 This project was developed by:
 
-* **Student 1 Name:** [Your Name]
-* **Student 2 Name:** [Partner's Name, if applicable]
+osama askar
 
-For academic inquiries, please contact: [Your Student Email Address]
+For academic inquiries, please contact: osamaasker76@gmail.com
