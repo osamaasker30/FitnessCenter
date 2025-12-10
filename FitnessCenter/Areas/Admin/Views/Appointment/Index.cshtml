@@ -26,6 +26,12 @@
                 </tr>
             </thead>
             <tbody>
+                @if(!Model.Any())
+                {
+                    <tr>
+                        <td colspan="7" class="text-center">No appointments found</td>
+                    </tr>
+                }
                 @foreach (var item in Model)
                 {
                     var statusClass = item.Status switch
