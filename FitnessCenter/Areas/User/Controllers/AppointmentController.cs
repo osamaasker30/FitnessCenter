@@ -169,5 +169,21 @@ namespace FitnessCenter.Areas.User.Controllers
 
             return View(myAppintments);
         }
+        [HttpGet]
+        public IActionResult Cancel(int id)
+        {
+            string currentUserId = _userManager.GetUserId(User);
+            Appointment appointment = _unitOfWork.AppointmentRepo
+                .Get(
+                    filter: a => a.UserId == currentUserId && a.Id==id,
+                    includeProperties: "Service,Trainer"
+                );
+            if (appointment == null) return NotFound();
+            appointment.Status = AppointmentStatus.Cancelled;
+            _unitOfWork.AppointmentRepo.Update(appointment);
+            _unitOfWork.Save();
+            TempData["success"] = "Appointment Cancelled Successfully";
+            return RedirectToAction("ReservedAppointments");
+        }
     }
 }
